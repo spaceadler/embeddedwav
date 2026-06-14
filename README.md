@@ -60,24 +60,23 @@ After fixing the math, I ran xxd to look at the raw bytes of the file I made. It
 * `57 41 56 45` \= "WAVE"  
 * `44 AC 00 00` \= That's 44100 in hex (Little Endian)\!
 
-## **5. How to compile & run**
+## **5. How to run**
 
-If you are on Linux or WSL, here is how you build it.  
-**The Command:**
+If you are on Linux or WSL, just run this command.  
+
+```bash
+./wav
+```
+
+If you want to compile it on your own, here's what you do:
 
 ```bash
 gcc -o wavgen wav.c -lm
 ```
 
 **Important:** You **must** add -lm at the end. This links the math library (libm). If you forget it, GCC will yell at you about "undefined reference to sin".  
-**Run it:**
-
-```bash
-./wavgen
-```
 
 This creates test.wav. Open it in VLC and enjoy the pure math
 
 ---
 *powered by logic, coffee, and many sleepless nights*
-
